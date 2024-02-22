@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, ScrollView, View, Text} from 'react-native';
 import Screen from '../layout/Screen';
 import initialModules from '../../data/modules.js';
@@ -7,7 +6,7 @@ import ModuleList from '../entity/modules/ModuleList.js';
 import {useState} from 'react';
 import RenderCount from '../UI/RenderCount.js'
 
-const ModuleListScreen = () => {
+const ModuleListScreen = ({navigation}) => {
     //Initialisations----
     //let modules = initialModules;
 
@@ -16,7 +15,7 @@ const ModuleListScreen = () => {
 
 
     //Handlers-----------
-    
+    const handleSelect = (module) => navigation.navigate('ModuleViewScreen', {module});
     const handleDelete = (module) => setModules(modules.filter((item) => item.ModuleID !== module.ModuleID));
     
     /*if(item.ModuleID !==module.ModuleID) return true; else return false;*/
@@ -28,7 +27,7 @@ const ModuleListScreen = () => {
   return (
     <Screen>
       <RenderCount />
-      <ModuleList modules={modules} onSelect={handleDelete} />
+      <ModuleList modules={modules} onSelect={handleSelect} />
     </Screen>
   );
 };

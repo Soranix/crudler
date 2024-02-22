@@ -1,22 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text} from 'react-native';
+import { StyleSheet } from 'react-native';
 import Screen from '../layout/Screen';
+import ModuleView from '../entity/modules/ModuleView';
 
-const ModuleViewScreen = () => {
+const ModuleViewScreen = ({navigate, route}) => {
     //Initialisations----
+  const{module} = route.params;
+
+
     //State--------------
     //Handlers-----------
     //View---------------
   return (
     <Screen>
-
-      <Text>View</Text>
-
-
+      <ModuleView module={module}/>
     </Screen>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container:{
+    gap: 15,
+  },
+  image:{
+    borderRadius: 3,
+  },
+  infoTray:{
+    gap: 5,
+  },
+  text:{
+    fontSize:16,
+  },
+  boldText:{
+    fontWeight: 'bold',
+  },
+  dimText:{
+    color:'grey',
+  },
+});
 
 export default ModuleViewScreen;

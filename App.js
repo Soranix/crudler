@@ -5,7 +5,7 @@ import ModuleAddScreen from './src/components/screens/ModuleAddScreen';
 import ModuleModifyScreen from './src/components/screens/ModuleModifyScreen';
 import ModuleViewScreen from './src/components/screens/ModuleViewScreen';
 
-const Stack =createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export const App = () => {
     //Initialisations----
@@ -15,7 +15,7 @@ export const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='ModuleViewScreen'
+        initialRouteName='ModuleListScreen'
         screenOptions = {{
           headerStyle: {backgroundColor: 'black'},
           headerTintColor: 'pink',
@@ -27,19 +27,16 @@ export const App = () => {
           component={ModuleListScreen}
           options={{title: 'List modules'}}
         />
-
         <Stack.Screen
           name = 'ModuleAddScreen'
           component={ModuleAddScreen}
           options={{title: 'Add Module'}}
         />
-
         <Stack.Screen
           name = 'ModuleViewScreen'
           component={ModuleViewScreen}
           options={{title: 'View Module'}}
         />
-
         <Stack.Screen
           name = 'ModuleModifyScreen'
           component={ModuleModifyScreen}

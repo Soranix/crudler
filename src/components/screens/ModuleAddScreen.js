@@ -17,6 +17,7 @@ const defaultModule = {
 const ModuleAddScreen = ({navigation, route}) => {
     //Initialisations----
     const {onAdd} = route.params;
+
     defaultModule.ModuleId = Math.floor(100000 + Math.random()* 900000);
     defaultModule.ModuleImage = 'https://images.freeimages.com/images/small-previews/cf5/cellphone-1313194.jpg';
 
@@ -35,7 +36,11 @@ const ModuleAddScreen = ({navigation, route}) => {
 
       <View style={styles.item}>
         <Text style={styles.itemLabel}>Module code</Text>
-        <TextInput value={module.ModuleCode} onChangeText={(value) => handleChange('ModuleCode', value)} style={styles.itemTextInput}/>
+        <TextInput 
+        value={module.ModuleCode} 
+        onChangeText={(value) => handleChange('ModuleCode', value)} 
+        style={styles.itemTextInput}
+        />
       </View>
 
       <View style={styles.item}>

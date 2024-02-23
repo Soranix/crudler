@@ -28,13 +28,13 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   text:{
-    fontSize:16,
+    fontSize: 16,
   },
   boldText:{
     fontWeight: 'bold',
   },
   dimText:{
-    color:'grey',
+    color: 'grey',
   },
 });
 

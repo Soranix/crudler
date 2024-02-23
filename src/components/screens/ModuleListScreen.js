@@ -1,8 +1,8 @@
-import {LogBox, StyleSheet, ScrollView, View, Text} from 'react-native';
+import { LogBox, StyleSheet, ScrollView, View, Text } from 'react-native';
 import Screen from '../layout/Screen';
 import initialModules from '../../data/modules.js';
 import ModuleList from '../entity/modules/ModuleList.js';
-import {useState} from 'react';
+import { useState } from 'react';
 import RenderCount from '../UI/RenderCount.js'
 import { Button, ButtonTray } from '../UI/Button.js';
 import Icons from '../UI/Icons.js';

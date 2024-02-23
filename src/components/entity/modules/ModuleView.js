@@ -1,6 +1,6 @@
 import { Alert, StyleSheet, Text, View} from 'react-native';
 import FullWidthImage from 'react-native-fullwidth-image';
-import {Button, ButtonTray} from '../../UI/Button';
+import { Button, ButtonTray } from '../../UI/Button';
 import Icons from '../../UI/Icons';
 
 const ModuleView = ({module, onDelete}) =>{
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   dimText:{
-    color:'grey',
+    color: 'grey',
   },
 });
 

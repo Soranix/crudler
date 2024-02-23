@@ -1,5 +1,5 @@
-import {useRef} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { useRef } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const RenderCount = ({backgroundColor = 'dodgerblue', fontColor = 'white'}) => {
     //Initialisations----
